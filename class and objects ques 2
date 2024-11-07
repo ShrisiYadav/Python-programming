@@ -1,0 +1,31 @@
+class Book:
+    def _init_(self, title="", author="", page=0):
+        self.title = title
+        self.author = author
+        self.page = page
+
+    def set_details(self, title, author, page):
+        self.title = title
+        self.author = author
+        self.page = page
+
+    def display_details(self):
+        print("Title:", self.title)
+        print("Author:", self.author)
+        print("Page:", self.page)
+
+    def is_valid(self):
+        return self.page > 300
+        
+book1 = Book()
+book2 = Book()
+
+book1.set_details("The Lord of the Rings", "J.R.R. Tolkien", 1178)
+
+book2.set_details("Pride and Prejudice", "Jane Austen", 424)
+
+book1.display_details()
+print("Is valid:", book1.is_valid())
+
+book2.display_details()
+print("Is valid:", book2.is_valid())
